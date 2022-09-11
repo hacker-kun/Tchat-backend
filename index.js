@@ -2,6 +2,7 @@ const express = require("express")
 const { Server } = require("socket.io");
 var http = require('http');
 const cors = require("cors")  
+require("dotenv").config();  
 
 const app = express()
 app.use(cors())
@@ -15,7 +16,7 @@ const io = new Server(server, {
   }
 });
 
-app.get("/", (req, res) => {res.send("Chat BE with Socket.io by Prince Raj"); res.end()})
+app.get("/", (req, res) => {res.send("Chat BE with Socket.io by shwetank"); res.end()})
 
 io.on("connection", (socket) => {
   console.log(socket.id)
