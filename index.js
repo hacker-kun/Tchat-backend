@@ -11,7 +11,7 @@ var server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "https://back-qe8w.onrender.com",
+    origin: "https://tchat-nu.vercel.app/",
     methods: ["GET", "POST"]
   }
 });
