@@ -11,7 +11,7 @@ var server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "https://tchat-nu.vercel.app/",
+    origin: "https://tchat-nu.vercel.app",
     methods: ["GET", "POST"]
   }
 });
@@ -31,6 +31,6 @@ io.on("connection", (socket) => {
 
 });
 
-const port = process.env.PORT || 9000
+const port = process.env.PORT || 8000
 
 server.listen(port, console.log(`App started at port ${port}`))
